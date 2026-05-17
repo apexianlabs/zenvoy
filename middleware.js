@@ -8,7 +8,7 @@ export function middleware(request) {
     return NextResponse.next()
   }
 
-  if (hostname === 'app.zenvoy.io') {
+  if (hostname === 'app.zenvoy.app') {
     if (pathname === '/') {
       const token = request.cookies.get('zen_token')?.value
       if (token) {
@@ -20,11 +20,11 @@ export function middleware(request) {
     return NextResponse.next()
   }
 
-  if (hostname === 'zenvoy.io' || hostname === 'www.zenvoy.io') {
+  if (hostname === 'zenvoy.app' || hostname === 'www.zenvoy.app') {
     if (pathname.startsWith('/dashboard') || pathname.startsWith('/billing') ||
         pathname.startsWith('/generate') || pathname.startsWith('/login') ||
         pathname.startsWith('/signup')) {
-      return NextResponse.redirect(new URL('https://app.zenvoy.io' + pathname, request.url))
+      return NextResponse.redirect(new URL('https://app.zenvoy.app' + pathname, request.url))
     }
   }
 
