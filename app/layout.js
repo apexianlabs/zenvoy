@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Zenvoy — AI message rewriter for any tone',
-  description: 'AI message rewriter for any tone',
+  title: 'Zenvoy — Paste your message, choose your tone, and get a perfectly rewritten version instantly.',
+  description: 'Paste your message, choose your tone, and get a perfectly rewritten version instantly.',
 }
 export default function RootLayout({ children }) {
   return (
