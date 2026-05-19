@@ -31,12 +31,8 @@ export async function POST(request) {
           body: JSON.stringify({ user_id: userId, title: `${tone} rewrite`, original_message: original_message, tone, result_data: result, status: 'complete' })
         })
         const dbData = await dbRes.json()
-        console.error('DB response:', JSON.stringify(dbData))
         itemId = dbData.data?.id || null
-      } catch(e) { 
-        console.error('DB save failed:', e.message)
-        console.error('DB save error details:', JSON.stringify(e.response?.data || e.stack))
-      }
+      } catch(e) { console.error('DB save failed:', e.message) }
     }
 
     return NextResponse.json({ itemId, result })
