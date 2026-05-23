@@ -1,4 +1,5 @@
 export const metadata = {
+  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
   title: 'Zenvoy — Paste your message, choose your tone, and get a perfectly rewritten version instantly.',
   description: 'Paste your message, choose your tone, and get a perfectly rewritten version instantly.',
 }
